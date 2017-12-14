@@ -1,3 +1,5 @@
+# sensitive files
 service-account.json
 
+# temporary files
 ~$*
