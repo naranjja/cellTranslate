@@ -1,4 +1,7 @@
 # excel-translate
+A simple service to translate an entire column from a spreadsheet.
+
+---
 
 ### Pre-requisites
 - Create a [Google Cloud Platform account](https://console.cloud.google.com/)
@@ -14,20 +17,18 @@ This service depends on:
 
 You can install all requirements by running [`setup.cmd`](./setup.cmd)
 
+---
+
 ### Usage
 - Place the spreadsheet file inside the `input/` folder
-
 - Open [`settings.conf`](./settings.conf) and type in:
   - The project ID (e.g. `PROJECT_ID=happy-panda-1234`)
   - The name of the spreadsheet file (e.g. `FILENAME=sample`)
-  - The name of the column to translate (e.g. `COLUMN=C`)
+  - The name of the column to translate (e.g. `COLUMN=title`)
   - The [source language](https://cloud.google.com/translate/docs/languages) (e.g. `SOURCE_LANG=en`)
   - The [target language](https://cloud.google.com/translate/docs/languages) (e.g. `TARGET_LANG=es`)
-
 - Run [`auth.cmd`](./auth.cmd) to authorize the service
   - This will open a browser window for you to login to your Google Cloud Platform account
-
-- Run [`translate.cmd`](./translate.cmd) to perform translation
-
-
+  - When finished, check if a file called `service-account.json` was created
+- Run `python `[`translate.py`](./translate.py) to perform translation
 - Check the `output/` folder for a new spreadsheet with the translated column
