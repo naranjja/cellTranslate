@@ -29,10 +29,14 @@ if __name__ == '__main__':
         df = pd.read_excel('./input/{}.xlsx'.format(settings['FILENAME']))
         
         print('- Translating...')
-        df['title'] = df['title'].apply(perform_translation)
+        df[settings['COLUMN']] = \
+            df[settings['COLUMN']].apply(perform_translation)
         
         print('- Saving changes to output folder...')
-        df.to_excel('./output/{}.xlsx'.format(settings['FILENAME']), index=False)
+        df.to_excel(
+            './output/{}.xlsx'.format(settings['FILENAME']), 
+            index=False)
+        
     except Exception as e:
         raise e
 
