@@ -17,7 +17,7 @@ if /i "%x%"=="y" (
 
 set /p x=Would you like to install the Python requirements? (Y/N) 
 if /i "%x%"=="y" (
-  call pip install -r requirements.txt
+  call pip install --upgrade -r requirements.txt
 )
 
 echo Installation finished!
