@@ -1,4 +1,4 @@
-# excel-translate
+# :globe_with_meridians: cellTranslate
 A simple service to translate an entire column from a spreadsheet.
 
 ---
